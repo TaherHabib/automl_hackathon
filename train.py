@@ -23,6 +23,7 @@ from sklearn.preprocessing import OneHotEncoder
 import autosklearn.classification
 import autosklearn.metrics
 from tpot import TPOTClassifier
+from sklearn.metrics import accuracy_score
 
 import config.settings
 
