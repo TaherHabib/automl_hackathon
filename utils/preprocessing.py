@@ -36,7 +36,7 @@ def clean_data(dataframe:pd.DataFrame, columns_to_remove:List):
     :return:
     """
     data = dataframe.drop(columns_to_remove, axis=1)
-    data = data.dropna()
+    data = data.fillna(0)
     data = convertCategoricalsToNumerics(data)
 
     return data
@@ -48,12 +48,12 @@ def save_csv(dataframe:pd.DataFrame,path:os.path):
     :param path:
     :return:
     """
-    dataframe.to_csv(path)
+    dataframe.to_csv(path,index=False)
 
 
 
 if __name__ == '__main__':
-    dataset = ['train','test']
+    dataset = ['test']
     root = config.settings.get_project_path()
     dataset_path = os.path.join(root,'Data')
 

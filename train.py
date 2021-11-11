@@ -4,7 +4,7 @@ import pandas as pd
 import sklearn
 import os
 
-from tpot import TPOTClassifier
+
 from sklearn.metrics import accuracy_score
 
 import config.settings
