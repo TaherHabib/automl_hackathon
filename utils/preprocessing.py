@@ -48,7 +48,7 @@ def save_csv(dataframe:pd.DataFrame,path:os.path):
     :param path:
     :return:
     """
-    dataframe.to_csv(path,index=False)
+    dataframe.to_csv(path)
 
 
 
